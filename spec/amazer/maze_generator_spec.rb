@@ -14,7 +14,7 @@ RSpec.describe Amazer::MazeGenerator do
 
     it 'all vertices have been visited and are valid' do
       expect(keys.size).to eq(300)
-      expect(values).to all( be > 0 )
+      expect(values).to all(be > 0)
     end
   end
 

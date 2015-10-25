@@ -37,10 +37,10 @@ RSpec.describe Amazer::Maze do
     end
 
     context 'when outside in negative coordiantes' do
-      let(:outside_vertex_in_minus) { Amazer::Vertex.new(-1, -1) }
+      let(:outside_minus_vertex) { Amazer::Vertex.new(-1, -1) }
 
       it 'returns false' do
-        expect(subject.inside_maze_width?(outside_vertex_in_minus)).to be_falsey
+        expect(subject.inside_maze_width?(outside_minus_vertex)).to be_falsey
       end
     end
 
@@ -59,10 +59,10 @@ RSpec.describe Amazer::Maze do
     end
 
     context 'when outside in negative coordiantes' do
-      let(:outside_vertex_in_minus) { Amazer::Vertex.new(-1, -1) }
+      let(:outside_minus_vertex) { Amazer::Vertex.new(-1, -1) }
 
       it 'returns false' do
-        expect(subject.inside_maze_height?(outside_vertex_in_minus)).to be_falsey
+        expect(subject.inside_maze_height?(outside_minus_vertex)).to be_falsey
       end
     end
 

@@ -2,13 +2,13 @@ module Amazer
   class Maze
 
     attr_accessor :maze,
-                 :height,
-                 :width
+                  :height,
+                  :width
 
     def initialize(size)
       @height = size[:height]
       @width  = size[:width]
-      @maze = Hash.new(0)
+      @maze   = Hash.new(0)
     end
 
     def [](vertex)
@@ -25,8 +25,8 @@ module Amazer
 
     def tunnelable?(vertex)
       inside_maze_width?(vertex) &&
-      inside_maze_height?(vertex) &&
-      new_vertex?(vertex)
+        inside_maze_height?(vertex) &&
+        new_vertex?(vertex)
     end
 
     def inside_maze_width?(vertex)
@@ -42,28 +42,26 @@ module Amazer
     end
 
     def to_s
-      output = " " + "_" * (2 * width - 1) + "\n"
+      output = ' ' + '_' * (2 * width - 1) + "\n"
 
       height.times do |y|
         width.times do |x|
           vertex = Vertex.new(x, y)
-          output << (Direction.has_path_to?(Direction::SOUTH, self[vertex]) ? " " : "_")
+          output << (Direction.path_to?(Direction::SOUTH, self[vertex]) ? ' ' : '_')
 
-          if Direction.has_path_to?(Direction::EAST, self[vertex])
-            if (Direction.has_path_to?(Direction::SOUTH, self[vertex])) # ||
-              # Direction.has_path_to?(Direction::SOUTH, self[Vertex.new(x+1, y)]))
-              output << " "
+          if Direction.path_to?(Direction::EAST, self[vertex])
+            if Direction.path_to?(Direction::SOUTH, self[vertex])
+              output << ' '
             else
-              output << "_"
+              output << '_'
             end
           else
-            output <<  "|"
+            output << '|'
           end
         end
         output << "\n"
       end
       output.chomp("|\n")
     end
-
   end
 end

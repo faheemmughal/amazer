@@ -40,4 +40,5 @@ RSpec.describe Amazer::Vertex do
       end
     end
   end
+
 end

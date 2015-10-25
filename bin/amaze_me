@@ -8,7 +8,6 @@ case ARGV.length
 when 0 then Amazer.run
 when 2 then Amazer.run ARGV[0].to_i, ARGV[1].to_i
 else
-  puts "Usage: ./bin/amaze_me [width height]"
+  puts 'Usage: ./bin/amaze_me [width height]'
   exit
 end
-

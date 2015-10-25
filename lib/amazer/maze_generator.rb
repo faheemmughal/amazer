@@ -1,5 +1,6 @@
 module Amazer
-
+  # Generate a maze of given dimensions using
+  # recursive backtracking algorithm
   class MazeGenerator
 
     attr_reader :maze,
@@ -37,6 +38,7 @@ module Amazer
     end
 
     def recursive_tunnel(vertex)
+      # Pick a random direction at a time and try to tunnel
       Direction.random_directions.each do |direction|
         new_vertex = vertex.get_vertex(direction)
         next unless maze.tunnelable?(new_vertex)
@@ -47,5 +49,6 @@ module Amazer
         recursive_tunnel(new_vertex)
       end
     end
+
   end
 end

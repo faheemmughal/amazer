@@ -1,7 +1,7 @@
 RSpec.describe Amazer::Direction do
 
-  describe '#has_path_to?' do
-    let(:subject) { described_class.has_path_to?(Amazer::Direction::WEST, value) }
+  describe '#path_to?' do
+    let(:subject) { described_class.path_to?(Amazer::Direction::WEST, value) }
 
     context 'when there is a path' do
       let(:value) { 6 }

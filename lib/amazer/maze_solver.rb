@@ -1,4 +1,6 @@
 module Amazer
+  # A class that takes a maze and tries to solve it using
+  # recursive backtracking
   class MazeSolver
 
     attr_reader :maze,
@@ -14,11 +16,11 @@ module Amazer
     def initialize(maze:)
       @maze         = maze
       @visited_path = Hash.new(false)
-      @solved_path  = Amazer::Maze.new(width: maze.width, height: maze.height)
+      @solved_path  = Maze.new(width: maze.width, height: maze.height)
 
       # Assuming we start from (0, 0) and find (width-1, height -1)
       @start_vertex = Vertex.new(0, 0)
-      @end_vertex   = Vertex.new(maze.width-1, maze.height-1)
+      @end_vertex   = Vertex.new(maze.width - 1, maze.height - 1)
     end
 
     def solve
