@@ -16,7 +16,6 @@ RSpec.describe Amazer::MazeGenerator do
       expect(keys.size).to eq(300)
       expect(values).to all( be > 0 )
     end
-
-    # TODO: should have more checks here
   end
+
 end

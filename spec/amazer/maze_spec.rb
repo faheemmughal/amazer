@@ -15,16 +15,16 @@ RSpec.describe Amazer::Maze do
     end
   end
 
-  describe '#walkable?' do
+  describe '#tunnelable?' do
     context 'when outside vertex' do
       it 'returns false' do
-        expect(subject.walkable?(outside_vertex)).to be_falsey
+        expect(subject.tunnelable?(outside_vertex)).to be_falsey
       end
     end
 
     context 'when inside and unvisited vertex' do
       it 'returns true' do
-        expect(subject.walkable?(vertex)).to be_truthy
+        expect(subject.tunnelable?(vertex)).to be_truthy
       end
     end
   end
