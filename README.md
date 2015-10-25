@@ -2,7 +2,7 @@
 a maze generator and solver using recursive backtracker algorithm
 
 
-== Installation & Execution
+##### Installation & Execution
 
 * Get all dependecies: `bundle`
 * Run tests: `rspec`
@@ -10,7 +10,7 @@ a maze generator and solver using recursive backtracker algorithm
 
 
 
-== Project Layout
+##### Project Layout
 
 * bin/*  : Executables
 * lib/*.rb : Source files
@@ -18,7 +18,7 @@ a maze generator and solver using recursive backtracker algorithm
 
 
 
-== Reading & Inspiration
+##### Reading & Inspiration
 
 * https://en.wikipedia.org/wiki/Maze_generation_algorithm#Recursive_backtracker
 * https://en.wikipedia.org/wiki/Maze_solving_algorithm#Recursive_algorithm
