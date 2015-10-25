@@ -6,7 +6,7 @@ a maze generator and solver using recursive backtracker algorithm
 
 * Get all dependecies: `bundle`
 * Run tests: `rspec`
-* Run: `./amaze_me.rb`
+* Run: `./bin/amaze_me.rb [width height]`
 
 
 
